@@ -19,6 +19,12 @@ const Contact = () => {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(Object.fromEntries(data)),
       });
+
+      await fetch("https://formsubmit.co/ajax/faisal96kp@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(Object.fromEntries(data)),
+      });
       setSubmitted(true);
       form.reset();
     } catch {
