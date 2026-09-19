@@ -7,7 +7,7 @@ import Hero from "@/components/Hero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Focality | AI-Powered Automation & Agentic Workflows",
+  title: "Home / Focality",
   description: "Focality builds intelligent automations, agentic workflows, websites, and AI/ML research solutions to help businesses grow.",
 };
 

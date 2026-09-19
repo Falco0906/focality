@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Focality",
+  title: "Blog / Focality",
   description: "Read in-depth articles from Focality on automation, AI/ML, and web development.",
 };
 

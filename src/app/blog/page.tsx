@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Focality",
+  title: "Blog / Focality",
   description: "Insights, tutorials, and updates from Focality on automation, AI/ML research, agentic workflows, and modern web development.",
 };
 

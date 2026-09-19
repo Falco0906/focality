@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sign In | Focality",
+  title: "Sign In / Focality",
   description: "Sign in to your Focality account.",
 };
 

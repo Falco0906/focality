@@ -4,7 +4,7 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | Focality",
+  title: "Contact / Focality",
   description: "Get in touch with Focality. Reach out to discuss your automation, AI/ML, or web development needs.",
 };
 

@@ -17,9 +17,13 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head>
-        <title>Focality | AI-Powered Automation &amp; Agentic Workflows</title>
+        <title>Home / Focality</title>
         <meta name="description" content="Focality builds intelligent automations, agentic workflows, websites, and AI/ML research solutions to help businesses grow." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#050505" />
+        <link rel="icon" href="/images/logo/Artisan_logo.jpg" type="image/jpeg" />
+        <link rel="shortcut icon" href="/images/logo/Artisan_logo.jpg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/images/logo/Artisan_logo.jpg" />
       </head>
 
       <body className={`bg-[#050505] text-[#ededed] antialiased ${inter.className}`}>
