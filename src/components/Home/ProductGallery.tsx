@@ -8,6 +8,7 @@ type Slide = (typeof slides)[number];
 
 export default function ProductGallery() {
   const [position, setPosition] = useState(1);
+  const [isHovered, setIsHovered] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
   const active = position === 4 ? 0 : position === 0 ? 2 : position - 1;
 
@@ -15,9 +16,10 @@ export default function ProductGallery() {
   const previous = () => setPosition((current) => current - 1);
 
   useEffect(() => {
+    if (isHovered) return;
     const timer = window.setInterval(next, 5000);
     return () => window.clearInterval(timer);
-  }, []);
+  }, [isHovered]);
 
   const handleTransitionEnd = () => {
     if (position !== 0 && position !== 4) return;
@@ -38,8 +40,15 @@ export default function ProductGallery() {
     if (slide === "loqi") {
       return (
         <div className="product-gallery-slide product-gallery-loqi" key={key}>
-          <img className="product-gallery-art" src="/images/gallery/focality-loqi-card.jpg" alt="Loqi, an AI native outbound workspace" />
-          <a className="loqi-hotspot" href="https://www.tryloqi.com/" aria-label="Learn more about Loqi" />
+          <img className="product-gallery-background" src="/images/gallery/tropical-green-leaves-background.jpg" alt="" />
+          <div className="product-gallery-content">
+            <h2>Loqi</h2>
+            <p className="product-gallery-loqi-tagline">From finding leads to reaching them.</p>
+            <p className="product-gallery-loqi-description">Discover prospects, understand the opportunity, and automate the first touch.</p>
+            <a className="product-gallery-contact" href="https://www.tryloqi.com/" target="_blank" rel="noreferrer">
+              Learn more <span aria-hidden="true">→</span>
+            </a>
+          </div>
         </div>
       );
     }
@@ -70,7 +79,7 @@ export default function ProductGallery() {
 
   return (
     <section className="product-gallery" id="products" aria-label="Focality products">
-      <div className="product-gallery-stage">
+      <div className="product-gallery-stage" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
         <div ref={trackRef} className="product-gallery-track is-animated" style={{ transform: `translate3d(-${position * 20}%, 0, 0)` }} onTransitionEnd={handleTransitionEnd}>
           {renderSlide("coming", "clone-coming")}
           {renderSlide("loqi", "loqi")}
