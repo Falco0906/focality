@@ -1,98 +1,38 @@
-import SingleBlog from "@/components/Blog/SingleBlog";
+import Link from "next/link";
 import blogData from "@/components/Blog/blogData";
-import Breadcrumb from "@/components/Common/Breadcrumb";
-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog / Focality",
-  description: "Insights, tutorials, and updates from Focality on automation, AI/ML research, agentic workflows, and modern web development.",
+  description: "Notes from Focality on building useful AI products.",
 };
 
-const Blog = () => {
-  return (
-    <>
-      <Breadcrumb
-        pageName="Blog"
-        description="Insights, tutorials, and updates from Focality on automation, AI/ML research, agentic workflows, and modern web development."
-      />
+const Blog = () => (
+  <main className="focality-blog-page">
+    <section className="focality-blog-hero">
+      <div className="focality-shell">
+        <p className="focality-blog-kicker">Focality / Notes</p>
+        <h1>Thinking about intelligent software.</h1>
+        <p>Ideas, observations, and things we&apos;re learning while building products for the way work actually happens.</p>
+      </div>
+    </section>
 
-      <section className="pt-[120px] pb-[120px]">
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-center">
-            {blogData.map((blog) => (
-              <div
-                key={blog.id}
-                className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
-              >
-                <SingleBlog blog={blog} />
-              </div>
-            ))}
-          </div>
-
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4">
-              <ul className="flex items-center justify-center pt-8">
-                <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
-                  >
-                    Prev
-                  </a>
-                </li>
-                <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
-                  >
-                    1
-                  </a>
-                </li>
-                <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
-                  >
-                    2
-                  </a>
-                </li>
-                <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
-                  >
-                    3
-                  </a>
-                </li>
-                <li className="mx-1">
-                  <span className="bg-body-color/15 text-body-color flex h-9 min-w-[36px] cursor-not-allowed items-center justify-center rounded-md px-4 text-sm">
-                    ...
-                  </span>
-                </li>
-                <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
-                  >
-                    12
-                  </a>
-                </li>
-                <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
-                  >
-                    Next
-                  </a>
-                </li>
-              </ul>
+    <section className="focality-blog-list" aria-label="Articles">
+      <div className="focality-shell">
+          {blogData.map((blog, index) => (
+            <article className="focality-post-row" key={blog.id}>
+            <div className="focality-post-index">0{index + 1}</div>
+            <div className="focality-post-content">
+              <div className="focality-post-meta"><span>{blog.tags[0]}</span><span>{blog.publishDate}</span></div>
+              <h2><Link href="/blog-details">{blog.title}</Link></h2>
+              <p>{blog.paragraph}</p>
+              <Link className="focality-post-link" href="/blog-details">Read note <span aria-hidden="true">↗</span></Link>
             </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+);
 
 export default Blog;

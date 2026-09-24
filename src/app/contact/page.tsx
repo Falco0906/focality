@@ -1,24 +1,24 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
 import Contact from "@/components/Contact";
-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact / Focality",
-  description: "Get in touch with Focality. Reach out to discuss your automation, AI/ML, or web development needs.",
+  description: "Get in touch with Focality.",
 };
 
-const ContactPage = () => {
-  return (
-    <>
-      <Breadcrumb
-        pageName="Contact Us"
-        description="Have a project in mind? Reach out to Focality and let's discuss how we can help your business grow with intelligent automation and AI solutions."
-      />
-
-      <Contact />
-    </>
-  );
-};
+const ContactPage = () => (
+  <main className="focality-contact-page">
+    <div className="focality-shell">
+      <div className="focality-contact-layout">
+        <div className="focality-contact-intro">
+          <p className="focality-contact-kicker">Focality</p>
+          <h1>Let&apos;s talk about what you&apos;re building.</h1>
+          <p>We build our own products, and work with a small number of teams on problems that need a thoughtful AI system.</p>
+        </div>
+        <Contact />
+      </div>
+    </div>
+  </main>
+);
 
 export default ContactPage;

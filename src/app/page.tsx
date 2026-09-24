@@ -1,25 +1,13 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/Contact";
-import Features from "@/components/Features";
-import Hero from "@/components/Hero";
+import FocalityHome from "@/components/Home/FocalityHome";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Home / Focality",
-  description: "Focality builds intelligent automations, agentic workflows, websites, and AI/ML research solutions to help businesses grow.",
+  description: "Focality builds AI products for work that shouldn't feel like software.",
 };
 
 export default function Home() {
   return (
-    <>
-      <ScrollUp />
-      <Hero />
-      <Features />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Contact />
-    </>
+    <FocalityHome />
   );
 }
