@@ -38,7 +38,7 @@ export default function ProductGallery() {
     if (slide === "loqi") {
       return (
         <div className="product-gallery-slide product-gallery-loqi" key={key}>
-          <img className="product-gallery-art" src="/images/loqi/loqi-reference-crop.png" alt="Loqi, an AI native outbound workspace" />
+          <img className="product-gallery-art" src="/images/gallery/focality-loqi-card.jpg" alt="Loqi, an AI native outbound workspace" />
           <a className="loqi-hotspot" href="https://www.tryloqi.com/" aria-label="Learn more about Loqi" />
         </div>
       );
@@ -48,7 +48,6 @@ export default function ProductGallery() {
       return (
           <div className="product-gallery-slide product-gallery-custom" key={key}>
           <img className="product-gallery-background" src="/images/gallery/b-927.jpg" alt="" />
-          <div className="product-gallery-number">2</div>
           <div className="product-gallery-content">
             <h2>Custom intelligence<br />for specific work.</h2>
             <p>We also build custom automations and AI software for companies with problems that need a system of their own.</p>
@@ -61,7 +60,6 @@ export default function ProductGallery() {
     return (
       <div className="product-gallery-slide product-gallery-coming" key={key}>
         <img className="product-gallery-background" src="/images/gallery/img-2317.jpg" alt="" />
-        <div className="product-gallery-number">3</div>
         <div className="product-gallery-content">
           <h2>More products<br />coming soon.</h2>
           <p>We&apos;re working on more software for work that benefits from a better understanding of context.</p>
