@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import menuData from "./menuData";
 
@@ -11,8 +10,6 @@ const Header = () => {
   const [productsOpen, setProductsOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
   const navRef = useRef<HTMLElement>(null);
-  const pathname = usePathname();
-  const darkPage = pathname !== "/" && pathname !== "/contact" && pathname !== "/blog";
 
   useEffect(() => {
     const onScroll = () => setSticky(window.scrollY > 24);
@@ -29,15 +26,15 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", closeOnOutsideClick);
   }, []);
 
-  const ink = darkPage ? "text-[#ededed]" : "text-[#111110]";
-  const muted = darkPage ? "text-[#a1a1aa] hover:text-white" : "text-[#57564f] hover:text-[#111110]";
+  const ink = "text-[#111110]";
+  const muted = "text-[#57564f] hover:text-[#111110]";
 
   return (
-    <header className={`focality-header ${sticky ? "focality-header-sticky" : ""} ${darkPage ? "focality-header-dark" : ""}`}>
+    <header className={`focality-header ${sticky ? "focality-header-sticky" : ""}`}>
       <div className="focality-shell focality-header-inner">
         <Link href="/" className={`footer-brand ${ink}`} onClick={() => setOpen(false)}>
           <Image src="/images/logo/Artisan_logo.jpg" alt="" width={30} height={30} className="footer-brand-mark" />
-          <span className="focality-wordmark">Focality</span>
+          <span className="focality-wordmark">focality</span>
         </Link>
         <button className={`focality-menu-toggle ${ink}`} aria-label="Toggle navigation" aria-expanded={open} onClick={() => setOpen(!open)}>
           <span /> <span />

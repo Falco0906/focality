@@ -2,9 +2,9 @@
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import ScrollToTop from "@/components/ScrollToTop";
 import { Providers } from "./providers";
 import { GeistSans } from "geist/font/sans";
+import "@fontsource/space-grotesk/500.css";
 import "../styles/index.css";
 
 export default function RootLayout({
@@ -31,7 +31,6 @@ export default function RootLayout({
             {children}
             <Footer />
           </div>
-          <ScrollToTop />
         </Providers>
       </body>
     </html>
