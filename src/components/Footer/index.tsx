@@ -20,7 +20,7 @@ const Footer = () => (
       </div>
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} focality</p>
-        <a href="https://www.linkedin.com/company/artisansystems/posts/?feedView=all" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="https://www.linkedin.com/company/focalityspace" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
       </div>
     </div>
   </footer>
