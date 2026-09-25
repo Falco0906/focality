@@ -12,8 +12,8 @@ export default function ProductGallery() {
   const trackRef = useRef<HTMLDivElement>(null);
   const active = position === 4 ? 0 : position === 0 ? 2 : position - 1;
 
-  const next = () => setPosition((current) => current + 1);
-  const previous = () => setPosition((current) => current - 1);
+  const next = () => setPosition((current) => Math.min(current + 1, 4));
+  const previous = () => setPosition((current) => Math.max(current - 1, 0));
 
   useEffect(() => {
     if (isHovered) return;
