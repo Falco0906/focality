@@ -1,8 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy / Focality",
+  title: "Privacy Policy",
   description: "How Focality handles information relating to its website and communications.",
+  alternates: { canonical: "/privacy" },
+  openGraph: { title: "Privacy Policy | Focality", description: "How Focality handles information relating to its website and communications.", url: "/privacy" },
+  twitter: { title: "Privacy Policy | Focality", description: "How Focality handles information relating to its website and communications." },
 };
 
 const PrivacyPage = () => (

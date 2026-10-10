@@ -3,8 +3,11 @@ import blogData from "@/components/Blog/blogData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog / Focality",
+  title: "Notes",
   description: "Notes from Focality on building useful AI products.",
+  alternates: { canonical: "/blog" },
+  openGraph: { title: "Notes | Focality", description: "Notes from Focality on building useful AI products.", url: "/blog" },
+  twitter: { title: "Notes | Focality", description: "Notes from Focality on building useful AI products." },
 };
 
 const Blog = () => (

@@ -1,8 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Focality",
+  title: "About",
   description: "Focality builds AI-native software around real problems.",
+  alternates: { canonical: "/about" },
+  openGraph: { title: "About | Focality", description: "Focality builds AI-native software around real problems.", url: "/about" },
+  twitter: { title: "About | Focality", description: "Focality builds AI-native software around real problems." },
 };
 
 const AboutPage = () => (

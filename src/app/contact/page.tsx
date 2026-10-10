@@ -2,8 +2,11 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact / Focality",
+  title: "Contact",
   description: "Get in touch with Focality.",
+  alternates: { canonical: "/contact" },
+  openGraph: { title: "Contact | Focality", description: "Get in touch with Focality.", url: "/contact" },
+  twitter: { title: "Contact | Focality", description: "Get in touch with Focality." },
 };
 
 const ContactPage = () => (

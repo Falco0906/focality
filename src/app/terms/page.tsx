@@ -1,8 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service / Focality",
+  title: "Terms of Service",
   description: "Terms governing use of the Focality website and general company interactions.",
+  alternates: { canonical: "/terms" },
+  openGraph: { title: "Terms of Service | Focality", description: "Terms governing use of the Focality website and general company interactions.", url: "/terms" },
+  twitter: { title: "Terms of Service | Focality", description: "Terms governing use of the Focality website and general company interactions." },
 };
 
 const TermsPage = () => (
