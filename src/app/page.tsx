@@ -2,7 +2,7 @@ import FocalityHome from "@/components/Home/FocalityHome";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: { absolute: "Focality — AI Products for Modern Work" },
+  title: { absolute: "Home / Focality" },
   description: "Focality builds AI products for modern work, helping businesses turn context into action.",
   alternates: { canonical: "/" },
   openGraph: {

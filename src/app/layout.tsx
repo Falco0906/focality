@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://focality.space"),
   title: {
     default: "Focality — AI Products for Modern Work",
-    template: "%s | Focality",
+    template: "%s / Focality",
   },
   description: "Focality builds AI products for modern work, helping businesses turn context into action.",
   applicationName: "Focality",
